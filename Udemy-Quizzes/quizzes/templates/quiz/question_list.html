@@ -1,1 +1,14 @@
-List of questions!
+{% extends "base.html" %}
+{% block title %}Questions{% endblock %}
+{% block content %}
+<div class="question-list">
+  {% for individual_question in questions %}
+  <div class="question">
+    <h3>{{ individual_question.question }}</h3>
+    <p>
+      <a href="{% url 'show-question' individual_question.id %}">View</a>
+    </p>
+  </div>
+  {% endfor %}
+</div>
+{% endblock %}

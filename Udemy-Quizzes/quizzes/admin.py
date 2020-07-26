@@ -1,8 +1,8 @@
 from django.contrib import admin
 
-from .models import Question
+from .models import Quiz
 
 
-@admin.register(Question)
-class QuestionAdmin(admin.ModelAdmin):
+@admin.register(Quiz)
+class QuizAdmin(admin.ModelAdmin):
     list_display = ['question', 'answer',]

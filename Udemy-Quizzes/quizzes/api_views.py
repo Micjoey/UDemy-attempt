@@ -7,7 +7,7 @@ from rest_framework.pagination import LimitOffsetPagination
 from rest_framework.response import Response
 
 from quizzes.serializers import MathQuizSerializer
-from quizzes.models import Question
+from quizzes.models import Quiz
 
 
 class QuizPagination(LimitOffsetPagination):
@@ -15,7 +15,7 @@ class QuizPagination(LimitOffsetPagination):
     max_limit = 100
 
 class QuizzesList(ListAPIView):
-    queryset = Question.objects.all()
+    queryset = Quiz.objects.all()
     serializer_class = MathQuizSerializer
     filter_backends = (DjangoFilterBackend, SearchFilter)
     filter_fields = ('id',)

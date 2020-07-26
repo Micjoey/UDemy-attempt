@@ -1,6 +1,6 @@
 from rest_framework import serializers
 
-from quizzes.models import Question
+from quizzes.models import Quiz
 
 class MathQuizSerializer(serializers.ModelSerializer):
     question = serializers.CharField(min_length=2, max_length=200)
@@ -10,7 +10,7 @@ class MathQuizSerializer(serializers.ModelSerializer):
     )
     
     class Meta:
-        model = Question
+        model = Quiz
         fields = (
             'id', 'question', 'answer', 
         )

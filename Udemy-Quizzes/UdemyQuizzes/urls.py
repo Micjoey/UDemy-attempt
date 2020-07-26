@@ -17,6 +17,6 @@ urlpatterns = [
     #      ),
 
     path('admin/', admin.site.urls),
-    path('questions/<int:id>/', quizzes.views.show, name='question'),
+    path('questions/<int:id>/', quizzes.views.show, name='show-question'),
     path('', quizzes.views.index, name='list-questions'),
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
