@@ -7,7 +7,7 @@ import quizzes.views
 import quizzes.api_views
 
 urlpatterns = [
-    path('api/v1/questions/', quizzes.api_views.ProductList.as_view()),
+    path('api/v1/questions/', quizzes.api_views.QuizzesList.as_view()),
     # path('api/v1/questions/new', quizzes.api_views.ProductCreate.as_view()),
     # path('api/v1/questions/<int:id>/',
     #      quizzes.api_views.ProductRetrieveUpdateDestroy.as_view()
