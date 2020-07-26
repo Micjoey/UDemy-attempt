@@ -6,7 +6,7 @@ from quizzes.models import Quiz
 
 def index(request):
     context = {
-        'question': Quiz.objects.all(),
+        'questions': Quiz.objects.all(),
     }
     return render(request, 'quiz/question_list.html', context)
 

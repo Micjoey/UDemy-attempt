@@ -19,6 +19,6 @@ class QuizzesList(ListAPIView):
     serializer_class = MathQuizSerializer
     filter_backends = (DjangoFilterBackend, SearchFilter)
     filter_fields = ('id',)
-    search_fields = ('question',)
+    search_fields = ('title',)
     pagination_class = QuizPagination
     queryset

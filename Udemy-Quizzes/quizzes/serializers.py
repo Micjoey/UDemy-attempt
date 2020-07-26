@@ -12,5 +12,5 @@ class MathQuizSerializer(serializers.ModelSerializer):
     class Meta:
         model = Quiz
         fields = (
-            'id', 'question', 'answer', 
+            'id', 'title', 'answer', 
         )

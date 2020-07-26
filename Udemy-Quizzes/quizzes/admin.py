@@ -5,4 +5,4 @@ from .models import Quiz
 
 @admin.register(Quiz)
 class QuizAdmin(admin.ModelAdmin):
-    list_display = ['question', 'answer',]
+    list_display = ['title', 'answer',]
